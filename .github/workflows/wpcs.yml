@@ -6,6 +6,10 @@ jobs:
     steps:
       - name: Checkout
         uses: actions/checkout@v2
+      - name: Setup PHP
+        uses: shivammathur/setup-php@v2
+        with:
+          php-version: 7.2
       - name: Install PHP Code Sniffer
         run: |
           composer create-project wp-coding-standards/wpcs --no-dev
