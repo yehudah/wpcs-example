@@ -8,8 +8,12 @@ jobs:
         uses: actions/checkout@v2
       - name: Setup PHP
         uses: shivammathur/setup-php@v2
+        env:
+          runner: self-hosted        
         with:
-          php-version: 7.3
+          php-version: 7.2
+          tools: composer, phpunit
+          extensions: mbstring,PDO,grpc,tokenizer,xml,json,ctype,fileinfo,openssl,bcmath          
       - name: Install PHP Code Sniffer
         run: |
           composer create-project wp-coding-standards/wpcs --no-dev
