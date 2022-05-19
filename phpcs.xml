@@ -1,0 +1,9 @@
+<?xml version="1.0"?>
+<ruleset name="GICS">
+	<description>WordPress security coding standards.</description>
+	<rule ref="WordPress.Security.EscapeOutput"/>
+	<rule ref="WordPress.Security.SafeRedirect"/>
+	<rule ref="WordPress.Security.NonceVerification"/>
+</ruleset>
+
+

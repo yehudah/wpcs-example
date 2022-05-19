@@ -1,0 +1,13 @@
+name: PHP Code Sniffer
+on: pull_request
+jobs:
+  phpcs:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v2
+      - name: Install PHP Code Sniffer
+        run: |
+          composer create-project wp-coding-standards/wpcs --no-dev
+      - name: Check coding standards
+        run: wpcs/vendor/bin/phpcs
