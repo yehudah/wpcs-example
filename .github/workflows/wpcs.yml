@@ -16,6 +16,7 @@ jobs:
           extensions: mbstring,PDO,grpc,tokenizer,xml,json,ctype,fileinfo,openssl,bcmath          
       - name: Install PHP Code Sniffer
         run: |
+          composer self-update 1.*.*
           composer create-project wp-coding-standards/wpcs --no-dev
       - name: Check coding standards
         run: wpcs/vendor/bin/phpcs
