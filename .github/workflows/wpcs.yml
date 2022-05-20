@@ -12,15 +12,10 @@ jobs:
           runner: self-hosted        
         with:
           php-version: 7.2
-          tools: composer, phpunit
+          tools: composer:1.0, phpunit
           extensions: mbstring,PDO,grpc,tokenizer,xml,json,ctype,fileinfo,openssl,bcmath          
       - name: Install PHP Code Sniffer
         run: |
-          mkdir ci
-          cd ci
-          git clone https://github.com/squizlabs/PHP_CodeSniffer.git phpcs
-          git clone -b master https://github.com/WordPress/WordPress-Coding-Standards.git wpcs
-          cd phpcs
-          ./bin/phpcs --config-set installed_paths ../wpcs
+          composer create-project wp-coding-standards/wpcs --no-dev
       - name: Check coding standards
         run: wpcs/vendor/bin/phpcs
