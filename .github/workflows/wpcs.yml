@@ -9,8 +9,8 @@ jobs:
       - name: Setup PHP
         uses: shivammathur/setup-php@v2   
         with:
-          php-version: 7.2
-          tools: composer:v1, phpunit
+          php-version: '7.2'
+          tools: composer:v1
           extensions: mbstring,PDO,grpc,tokenizer,xml,json,ctype,fileinfo,openssl,bcmath          
       - name: Install PHP Code Sniffer
         run: |
