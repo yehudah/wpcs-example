@@ -7,9 +7,7 @@ jobs:
       - name: Checkout
         uses: actions/checkout@v2
       - name: Setup PHP
-        uses: shivammathur/setup-php@v2
-        env:
-          runner: self-hosted        
+        uses: shivammathur/setup-php@v2   
         with:
           php-version: 7.2
           tools: composer:v1, phpunit
