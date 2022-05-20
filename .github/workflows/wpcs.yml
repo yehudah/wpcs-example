@@ -22,4 +22,4 @@ jobs:
           ./bin/phpcs --config-set installed_paths ../wpcs
       - name: Check coding standards
         run: |
-          ~/projects/phpcs/bin/phpcs ~/wpcs-example/wpcs-example
+          ~/projects/phpcs/bin/phpcs ~/work/wpcs-example/wpcs-example
