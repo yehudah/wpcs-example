@@ -12,7 +12,7 @@ jobs:
           runner: self-hosted        
         with:
           php-version: 7.2
-          tools: composer:1.0, phpunit
+          tools: composer:v1, phpunit
           extensions: mbstring,PDO,grpc,tokenizer,xml,json,ctype,fileinfo,openssl,bcmath          
       - name: Install PHP Code Sniffer
         run: |
