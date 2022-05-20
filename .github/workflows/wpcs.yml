@@ -18,7 +18,8 @@ jobs:
           cd ~/projects
           git clone https://github.com/squizlabs/PHP_CodeSniffer.git phpcs
           git clone -b master https://github.com/WordPress/WordPress-Coding-Standards.git wpcs
-      - name: Check coding standards
-        run: |
           cd ~/projects/phpcs
           ./bin/phpcs --config-set installed_paths ../wpcs
+      - name: Check coding standards
+        run: |
+          ~/projects/phpcs/bin/phpcs ~/wpcs-example/wpcs-example
