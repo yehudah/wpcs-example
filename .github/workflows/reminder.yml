@@ -15,11 +15,6 @@ jobs:
 
     # Steps represent a sequence of tasks that will be executed as part of the job
     steps:
-      - uses: actions/setup-node@v3
-        with:
-          node-version: 16
-          cache: 'npm'
-      - run: npm ci
       - uses: yehudah/remind-the-reviewers@2ba984c9a12fd99326dc5b0ae609ded6e3966e58 
         with:
           # Remind every 3 hours
