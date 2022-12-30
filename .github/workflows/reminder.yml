@@ -16,10 +16,10 @@ jobs:
     # Steps represent a sequence of tasks that will be executed as part of the job
     steps:
       # Checks-out your repository under $GITHUB_WORKSPACE, so your job can access it
-      - uses: actions/checkout@main
+      - uses: actions/checkout@v3
 
       # Runs a single command using the runners shell
-      - uses: yehudah/remind-the-reviewers@a81bbbf8298c0fa03ea29cdc473d45769f953675
+      - uses: yehudah/remind-the-reviewers@2ba984c9a12fd99326dc5b0ae609ded6e3966e58 
         with:
           # Remind every 3 hours
           interval: 3
