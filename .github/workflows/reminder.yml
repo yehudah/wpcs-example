@@ -15,7 +15,7 @@ jobs:
 
     # Steps represent a sequence of tasks that will be executed as part of the job
     steps:
-      - uses: yehudah/remind-the-reviewers@339966b016108f66d77af8fb76b20996141e30c6 
+      - uses: yehudah/remind-the-reviewers@f6abcb7030f9207359bec969e6dcafd1283e1721 
         with:
           # Remind every 3 hours
           interval: 1
